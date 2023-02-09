@@ -1,0 +1,30 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+scalar Time
+
+type FourEyesReview {
+    id: Int!
+    status : String!
+    boId: Int!
+    boType: String!
+    before: String!
+    after: String!
+    reviewer: String!
+    CreatedAt: Time
+    UpdatedAt: Time
+    DeletedAt: Time,
+}
+
+
+type Query {
+    fourEyesReview(id: Int!): FourEyesReview
+    fourEyesReviews(boType: String!): [FourEyesReview!]
+    fourEyesReviewByBoId(boId: Int!): FourEyesReview
+}
+
+type Mutation {
+    ValidateFourEyesReview(id: ID!): FourEyesReview!
+    rejectFourEyesReview(id: ID!): FourEyesReview!
+}

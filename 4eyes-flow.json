@@ -1,0 +1,14 @@
+{
+  "pendingCreation": {
+    "approved": "active",
+    "rejected": "rejected"
+  },
+  "pendingDeletion": {
+    "approved": "deleted",
+    "rejected": "active"
+  },
+  "pendingModification": {
+    "approved": "active",
+    "rejected": "rejected"
+  }
+}
